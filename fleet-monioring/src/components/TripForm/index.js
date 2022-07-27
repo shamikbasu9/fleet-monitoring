@@ -47,17 +47,17 @@ export default class TripEntryForm extends React.Component {
     addFleet(e) {
         let rows = this.state.add_rows;
         rows.push({
-            fleet_type: e,
+            fleet_type: e.target.value,
         })
         this.setState({
             add_rows: rows,
-            fleet_type: e
+            fleet_type: e.target.value
         })
     }
 
     exWlOnChange(e) {
         this.setState({
-            fleet_id: e
+            fleet_id: e.target.value
         })
     }
     inputChange(e, field, index) {
