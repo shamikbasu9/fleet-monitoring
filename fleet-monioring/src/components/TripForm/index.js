@@ -103,7 +103,7 @@ export default class TripEntryForm extends React.Component {
         let obArray = this.getFinalArray(field);
         if(obArray && Object.keys(obArray).length) {
             Object.keys(obArray).map((keys) => {
-                obSum += obArray[keys][ obArray[keys].length - 1].value
+                obSum += obArray[keys][obArray[keys].length - 1].value
             })
         }
         return ({
@@ -139,7 +139,7 @@ export default class TripEntryForm extends React.Component {
             }
         }
         return <div id='trip_entry_form'> 
-            <div className='title'>UI 1 - Trip Entry Form</div>
+            <div className='title'>Trip Entry Form</div>
             <div className='table-container'>
                 <table>
                     <tr className='in-header'>
